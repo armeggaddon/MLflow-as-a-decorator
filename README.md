@@ -148,4 +148,8 @@ Once the training workflow is done we call the prediction flow by passing the te
 
 ##### Note : *In this demo, we are not hosting the trained model as an instance, since that requires a database where the model will be saved either as an inbuild model type like sklearn, pytorch, tensorflow or a generic pyfunc model, To know more about that feel free to contact me or drop me a message.*
 
-Run the workflow multiple times by changing the parameters and compare the accuracy between different runs.
+Run the workflow multiple times by changing the parameters. This will generate a folder call mlruns if MLflow is enabled. To view the ML logging in UI run the below command from the mlruns directory and compare the accuracy between different runs.
+
+```console
+    mlflow ui
+```
