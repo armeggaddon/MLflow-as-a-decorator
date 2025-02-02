@@ -96,6 +96,8 @@ Now I'm creating different methods for preprocessing, feature selection and clas
  
 In any ML pipeline all the steps except the last one are called as transformers since they not only fit the data, they perform transformation as well for the next step to progress. Whereas the last step in the workflow is called as estimator, since it generally estimate the final output, hence they accompany with the predict method in it.
 
+![alt text](https://github.com/armeggaddon/MLflow-as-a-decorator/blob/main/images/PCA_params.JPG "Stage Params")
+
 In preprocessing, I'm using StandardScaler() and apply the fit_transform method during training, whereas in prediction we only need to transform the given data by using the existing scaler instance. The same logic is applicable to PCA as well,
 
 ```python
@@ -133,6 +135,8 @@ Additionally, incorporating MLflow components directly into the code can make it
 
 To address these challenges, I recommend keeping the ML monitoring layer separate from the business logic by using decorators. In Python, a decorator is a design pattern that enables you to add new functionality to an existing object without altering its structure. Decorators are usually implemented as functions (or classes) that take another function (or method) as an argument, extend its behavior, and then return a new function with the added functionality.
 
+![alt text](https://github.com/armeggaddon/MLflow-as-a-decorator/blob/main/images/Classification_model.JPG "Artifacts")
+
 #### d. ML flow
 
 It is nearly impossible to present the entire code implementation in this documentation, so I will provide only the highlights here. Please refer to the source code for more detailed information.
@@ -140,6 +144,8 @@ It is nearly impossible to present the entire code implementation in this docume
 As mentioned earlier, we need to start by creating an experiment. Following that, we create a parent run, within which all the child runs, such as preprocessing, will occur. We then capture each child run, tagging it with the parent run to ensure that the child run is correctly linked to the parent run in the UI.
 
 During this process, we capture the necessary artifacts, parameters, metrics, and the model. The code is structured with these elements in each decorator, and to activate it, we add these decorators as annotations to the respective methods in the pipeline code. This code will be executed whenever the actual workflow is triggered, logging the data according to the decorator logic. Additionally, we can disable ML logging by setting a boolean parameter.
+
+![alt text](https://github.com/armeggaddon/MLflow-as-a-decorator/blob/main/images/Metrics.JPG "Metrics") 
 
 
 #### e. Invoke the workflow
