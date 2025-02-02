@@ -28,7 +28,7 @@ It is an open-source platform for managing the end-to-end machine learning lifec
 
 In summary, MLflow helps in managing the machine learning lifecycle, including experimentation, reproducibility, and deployment, which are critical aspects of building effective machine learning pipelines. It provides a unified platform to manage different stages of the ML pipeline and facilitates better collaboration and management of machine learning projects.
 
-![alt text]([Isolated.png](https://github.com/armeggaddon/MLflow-as-a-decorator/blob/main/images/Experiemnt.JPG) "MLflow Experiment and runs")
+![alt text](https://github.com/armeggaddon/MLflow-as-a-decorator/blob/main/images/Experiemnt.JPG "MLflow Experiment and runs")
 
 ### 2. What are the takeaways here?
 
